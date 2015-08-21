@@ -1,11 +1,15 @@
 #!/bin/sh
 
+GITHUBUSER="foo"
+GITHUBREPO="bar.git"
+
+BACKUPUSR="root"
+BACKUPGRP="root"
+
 WORKDIR="@tmpWork/GitBackup/"
-GITREPO="git@github.com:scriptnerd/Thyra.git"
-GITNAME="Thyra"
-BACKUPDIR="/volume1/homes/martin/GitBackup/"
-BACKUPUSR="martin"
-BACKUPGRP="users"
+GITREPO="git@github.com:$GITHUBUSER/$GITHUBREPO"
+GITNAME="$GITHUBREPO"
+BACKUPDIR="/var/GitBackup"
 DATE=`date +%Y-%m-%d.%H-%M`
 
 Backup () {
